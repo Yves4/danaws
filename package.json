@@ -1,0 +1,11 @@
+{
+  "name": "DANAWS",
+  "version": "0.0.0",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "node-wit": "^4.2.0",
+    "request": "^2.80.0"
+  },
+  "devDependencies": {}
+}
