@@ -28,7 +28,10 @@ try {
 // Helpers
 const accessToken = (() => {
   if (process.argv.length !== 3) {
-    console.log('usage: node dana.js <wit-access-token>');
+
+    const path = require('path');
+
+    console.log('usage: node ' + path.basename(process.argv[1]) + ' <wit-access-token>');
     process.exit(1);
   }
   return process.argv[2];
