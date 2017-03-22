@@ -137,6 +137,7 @@ io.on('connection', function (socket) {
   
   socket.on('msg', function (data) {
     //socket.emit('msg', data );
+    console.log(data);
     var r = client.runActions(
       sessionId,
       data.message,

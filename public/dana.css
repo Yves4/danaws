@@ -1,9 +1,11 @@
 #message {
     margin-top: 2px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    width: 160px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border: 2px solid #606060;
+    outline: none;
+    width: 90%;
 }
 .question {
     float: right;
@@ -25,22 +27,29 @@
     border-radius: 6px;
     font-family: arial;
     font-size: 80%;
-    max-width: 170px;
+    max-width: 200px;		/* hardcoded */
     word-wrap: break-word;
 }
 #msgs {
     padding: 1px;
 }
 #qawrap {
-    height: 400px;
-    width: 170px;
+    height: 400px;		/* hardcoded */
+    width: 200px;		/* hardcoded */
     background: #c0c0c0;
 }
 #message-container {
-    height: 400px;
-    max-width: 170px;
+    height: 400px;		/* hardcoded */
+    max-width: 100%;
     overflow: hidden;
     background: #c0c0c0;
     display: table-cell;
     vertical-align: bottom;
 }
+
+@media (max-width: 600px) {
+    #qawrap {
+        width: 100%;
+    }
+}
+
