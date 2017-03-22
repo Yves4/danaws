@@ -5,13 +5,19 @@
 const PORT = process.env.PORT || 80;
 var http = require('http');
 var fs = require('fs');
+var finalhandler = require('finalhandler')
+var serveStatic = require('serve-static')
+
+// Serve up public folder
+var serve = serveStatic('public', {'index': ['index.html', 'index.htm']})
 
 // Loading the index file .html displayed to the client
 var server = http.createServer(function(req, res) {
-  fs.readFile('./index.html', 'utf-8', function(error, content) {
-    res.writeHead(200, {"Content-Type": "text/html"});
-    res.end(content);
-  });
+  serve(req, res, finalhandler(req, res));
+  //fs.readFile('./index.html', 'utf-8', function(error, content) {
+  //  res.writeHead(200, {"Content-Type": "text/html"});
+  //  res.end(content);
+  //});
 });
 
 var io = require('socket.io').listen(server);
