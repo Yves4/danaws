@@ -9,7 +9,7 @@ function showqalist( qa )
     for( i = 0; i < qa.length; i++ )
     {
         // <br> blijkt nodig anders lopen vraag en antwoordregels over elkaar heen
-        $("#msgs").append( "<li class=\"msg " + qa[i][0] + "\">" + qa[i][1] + "</li>\n");
+        $("#msgs").append( "<li class=\"msg " + qa[i][0] + "\">" + qa[i][1] + "</li><p/>\n");
     }
 }
 
@@ -21,6 +21,9 @@ function addqalist( qa, type, msg )
 $(document).ready(function(){
 
     var socket = io();
+
+    // Trigger welcome!
+    socket.emit('msg', {message: 'hi'});
 
     $("#message").focus();
 

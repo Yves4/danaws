@@ -136,7 +136,6 @@ io.on('connection', function (socket) {
   sessions[sessionId] = { context: {} };
   
   socket.on('msg', function (data) {
-    //socket.emit('msg', data );
     console.log(data);
     var r = client.runActions(
       sessionId,

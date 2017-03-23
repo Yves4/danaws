@@ -27,8 +27,9 @@
     border-radius: 6px;
     font-family: arial;
     font-size: 80%;
-    max-width: 200px;		/* hardcoded */
+    max-width: 165px;		/* hardcoded */
     word-wrap: break-word;
+    word-break: break-all;
 }
 #msgs {
     padding: 1px;
@@ -36,19 +37,18 @@
 #qawrap {
     height: 400px;		/* hardcoded */
     width: 200px;		/* hardcoded */
-    background: #c0c0c0;
+    background: #FFCD00;
 }
 #message-container {
     height: 400px;		/* hardcoded */
-    max-width: 100%;
+    width: 200px;		/* hardcoded */
     overflow: hidden;
-    background: #c0c0c0;
     display: table-cell;
     vertical-align: bottom;
 }
 
 @media (max-width: 600px) {
-    #qawrap {
+    #qawrap #message-container {
         width: 100%;
     }
 }
